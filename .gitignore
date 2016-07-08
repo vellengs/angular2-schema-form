@@ -5,6 +5,7 @@
 /coverage
 /tsd_typings/
 npm-debug.log
+*.d.ts
 
 /dist/
 
