@@ -1,0 +1,18 @@
+{
+  "name": "angularsf2-gh-pages",
+  "version": "0.0.1",
+  "description": "Website of the angular2 schema form module",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makinacorpus/angular2-schema-form.git"
+  },
+  "author": "Frank Bessou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makinacorpus/angular2-schema-form/issues"
+  },
+  "homepage": "https://makinacorpus.github.com/angular2-schema-form/"
+}
