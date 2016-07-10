@@ -6,7 +6,5 @@
 /tsd_typings/
 npm-debug.log
 
-/dist/
-
 .idea
 .vscode
