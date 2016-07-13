@@ -117846,15 +117846,14 @@
 	};
 	var core_1 = __webpack_require__(5);
 	var router_1 = __webpack_require__(387);
-	__webpack_require__(450);
 	var GithubPagesAppComponent = (function () {
 	    function GithubPagesAppComponent() {
 	    }
 	    GithubPagesAppComponent = __decorate([
 	        core_1.Component({
 	            selector: "ghpages-app",
-	            template: __webpack_require__(451),
-	            styles: [__webpack_require__(452)],
+	            template: __webpack_require__(450),
+	            styles: [__webpack_require__(451)],
 	            directives: [router_1.ROUTER_DIRECTIVES]
 	        }), 
 	        __metadata('design:paramtypes', [])
@@ -117866,18 +117865,12 @@
 
 /***/ },
 /* 450 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "bootstrap.min.css";
-
-/***/ },
-/* 451 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top top-nav-collapse\">\n\t<div class=\"container\">\n\t\t<div class=\"navbar-header page-scroll\">\n\t\t\t<a class=\"navbar-brand page-scroll\">Angular2 Schema Form</a>\n\t\t</div>\n\t\t<div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n\t\t\t<ul class=\"nav navbar-nav\">\n\t\t\t\t<li><a [routerLink]=\"['/introduction']\" routerLinkActive=\"active\">Introduction</a></li>\n\t\t\t\t<li><a [routerLink]=\"['/tutorial']\" routerLinkActive=\"active\">Tutorial</a></li>\n\t\t\t\t<li><a [routerLink]=\"['/playground']\" routerLinkActive=\"active\">Playground</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</nav>\n<section class=\"container page\">\n<router-outlet></router-outlet>\n</section>\n<!--<div class=\"main\">\n<section id=\"introduction\">\n\t<div class=\"container\">\n\t\tTest\n\t</div>\n</section>\n<section id=\"features\">\n\t<div class=\"container\">\n\t</div>\n</section>\n<section id=\"playground\">\n\t<div class=\"container\">\n\t\t<ng2sfdemo-playground></ng2sfdemo-playground>\n\t</div>\n</section>-->\n"
 
 /***/ },
-/* 452 */
+/* 451 */
 /***/ function(module, exports) {
 
 	module.exports = "h1 {\n\tpadding-left: 25px;\n}\n\nsection.page {\n\tpadding-top: 60px; \n\tbackground: white;\n\tbox-flex: 1;\n\tbox-shadow: 0 0 2px #999;\n}\n\nnav a.active {\n\tcolor: #222\n}\n"
