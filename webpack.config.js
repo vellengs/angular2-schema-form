@@ -1,21 +1,22 @@
 webpack = require("webpack");
 HtmlWebpackPlugin = require("html-webpack-plugin");
+CopyWebpackPlugin = require("copy-webpack-plugin");
 path = require("path");
 
 const METADATA = {
 	title : "Angular2 Schema Form demo",
-	baseUrl: "/"
+	baseUrl: process.env.NODE_ENV === "production" ? "/angular2-schema-form/" : "/"
 };
 
 module.exports = {
 	metadata: METADATA,
-
+	contexxt: path.resolve("."),
 	resolve: {
 		extensions : ["",".ts",".js"]
 	},
 	output: {
 		path: path.resolve("."),
-		publicPath: process.env.NODE_ENV === "production" ? "/angular2-schema-form/" : "/",
+		publicPath: METADATA.baseUrl,
 		filename : "[name].app.js"
 	},
 	entry: {
@@ -50,7 +51,6 @@ module.exports = {
 	plugins : [
 //		new webpack.optimize.UglifyJsPlugin({}),
 		new HtmlWebpackPlugin({
-			hash: true,
 			filename: "index.html",
 			template: path.resolve("./src/index.html"),
 		})

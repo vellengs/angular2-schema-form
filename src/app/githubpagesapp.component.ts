@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { ROUTER_DIRECTIVES } from "@angular/router";
 import { PlaygroundComponent } from "./playground.component";
 
-require("style!bootrstrap/dist/bootsrtap.min.css");
+require("file?name=[name].[ext]!bootstrap/dist/css/bootstrap.min.css");
 
 @Component({
 	selector: "ghpages-app",
