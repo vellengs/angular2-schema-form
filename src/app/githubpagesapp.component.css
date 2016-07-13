@@ -1,0 +1,14 @@
+h1 {
+	padding-left: 25px;
+}
+
+section.page {
+	padding-top: 60px; 
+	background: white;
+	box-flex: 1;
+	box-shadow: 0 0 2px #999;
+}
+
+nav a.active {
+	color: #222
+}

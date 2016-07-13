@@ -1,0 +1,14 @@
+<div class="page-header"><h1>Playground</h1></div>
+<p>Here you can test the form component.</p>
+<hr/>
+<!-- <select (ngModelChange)="loadSchema($event.value)" >
+	<option *ngFor="let option in samples" value="option.url">{{option.label}}</option>
+</select> -->
+<div class="row">
+	<div class="col-md-6">
+		<schema-form [schema]="editor" [model]="editorModel" [actions]="editorActions"></schema-form>
+	</div>
+	<div class="col-md-6">
+		<schema-form [schema]="schema" [model]="model" [actions]="actions" #built></schema-form>{{built.values}}
+	</div>
+</div>

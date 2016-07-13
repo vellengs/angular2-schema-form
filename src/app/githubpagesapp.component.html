@@ -1,1 +1,32 @@
-<div>Coucou</div>
+<nav class="navbar navbar-default navbar-fixed-top top-nav-collapse">
+	<div class="container">
+		<div class="navbar-header page-scroll">
+			<a class="navbar-brand page-scroll">Angular2 Schema Form</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a [routerLink]="['/introduction']" routerLinkActive="active">Introduction</a></li>
+				<li><a [routerLink]="['/tutorial']" routerLinkActive="active">Tutorial</a></li>
+				<li><a [routerLink]="['/playground']" routerLinkActive="active">Playground</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<section class="container page">
+<router-outlet></router-outlet>
+</section>
+<!--<div class="main">
+<section id="introduction">
+	<div class="container">
+		Test
+	</div>
+</section>
+<section id="features">
+	<div class="container">
+	</div>
+</section>
+<section id="playground">
+	<div class="container">
+		<ng2sfdemo-playground></ng2sfdemo-playground>
+	</div>
+</section>-->

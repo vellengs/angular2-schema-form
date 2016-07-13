@@ -15,41 +15,49 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve("."),
-		filename : "ghpages.app.js"
+		filename : "[name].app.js"
 	},
 	entry: {
-		"app": path.resolve("./src/app/main.browser")
+		"app": path.resolve("./src/app/main.browser"),
+		"vendor": path.resolve("./src/vendor.ts")
 	},
 	module: {
 		preLoaders: [{
 			test: /\.js$/,
 			loader: "source-map-loader",
-			exclude: [ /node_modules/]
+			exclude: [
+				path.resolve("./node_modules/rxjs"),
+				path.resolve("./node_modules/@angular"),
+			]
 		}],
 		loaders: [{
 			test: /\.ts$/,
 			loader: "awesome-typescript-loader",
-			exclude: /node_modules/
+			exclude: [/\.spec\.ts$/]
 		},{
 			test: /\.json$/,
 			loader: "json-loader"
 		},{
 			test: /\.css$/,
-			loader: 'raw-loader',
+			loader: 'raw-loader'
 		},{
 			test: /\.html/,
 			loader: "raw-loader",
-			exclude: path.resolve("index.html")
+			exclude: [path.resolve("./src/index.html")]
 		}]
 	},
 	plugins : [
-		new webpack.optimize.UglifyJsPlugin({}),
+//		new webpack.optimize.UglifyJsPlugin({}),
 		new HtmlWebpackPlugin({
 			hash: true,
 			filename: "index.html",
 			template : path.resolve("./src/index.html")
 		})
 	],
+	devServer: {
+		port: 3000,
+		historyApiFallback: true
+	},
 	node: {
 		global: 'window',
 		crypto: 'empty',

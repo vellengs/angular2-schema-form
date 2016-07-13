@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-
-  <title><%= webpackConfig.metadata.title %></title>
+  <base href="/">
+  <title>Angular2 Schema Form demo</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="<%= webpackConfig.metadata.title %>">
+  <meta name="description" content="Angular2 Schema Form demo">
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
 <link rel="manifest" href="/static/manifest.json">
@@ -17,12 +17,10 @@
   <!-- end favicon -->
 
   <!-- base url -->
-  <base href="<%= webpackConfig.metadata.baseUrl %>">
+  <base href="/">
 
 
-  <% for (var css in htmlWebpackPlugin.files.css) { %>
-  <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-  <% } %>
+  
   <style>
 	body {
 		max-width:1500px;
@@ -39,10 +37,7 @@
     </ghpages-app>
 
 
-  <% if (webpackConfig.metadata.ENV === 'development') { %>
-  <!-- Webpack Dev Server reload -->
-  <script src="/webpack-dev-server.js"></script>
-  <% } %>
+  
 
-<script type="text/javascript" src="ghpages.app.js?0dedefc96b09e2bd4eea"></script></body>
+<script type="text/javascript" src="vendor.app.js?f891c8afcb3565cac40b"></script><script type="text/javascript" src="app.app.js?f891c8afcb3565cac40b"></script></body>
 </html>

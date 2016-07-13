@@ -1,0 +1,26 @@
+{
+	"type": "object",
+	"properties":{
+		"editorSchema": {
+			"description": "Schema",
+			"type": "string",
+			"widget": "textline"
+		},
+		"editorModel": {
+			"description": "Model",
+			"type": "string",
+			"widget": "textline"
+		},
+		"editorActions": {
+			"description": "actions",
+			"type": "string",
+			"widget":"textline"
+		}
+	},
+	"buttons": [{
+		"label": "Update",
+		"id": "update"
+	}],
+	"order":["editorSchema", "editorModel","editorActions"],
+	"required": []
+}
