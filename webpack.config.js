@@ -15,6 +15,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve("."),
+		publicPath: process.env.NODE_ENV === "production" ? "/angular2-schema-form/" : "/",
 		filename : "[name].app.js"
 	},
 	entry: {
@@ -52,7 +53,6 @@ module.exports = {
 			hash: true,
 			filename: "index.html",
 			template: path.resolve("./src/index.html"),
-			baseUrl: process.env.NODE_ENV === "production" ? "/angular2-schema-form/" : "/" 
 		})
 	],
 	devServer: {
