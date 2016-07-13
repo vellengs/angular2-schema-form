@@ -117846,6 +117846,7 @@
 	};
 	var core_1 = __webpack_require__(5);
 	var router_1 = __webpack_require__(387);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"style!bootrstrap/dist/bootsrtap.min.css\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var GithubPagesAppComponent = (function () {
 	    function GithubPagesAppComponent() {
 	    }
