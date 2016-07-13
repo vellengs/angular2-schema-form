@@ -51,11 +51,12 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			hash: true,
 			filename: "index.html",
-			template : path.resolve("./src/index.html")
+			template: path.resolve("./src/index.html"),
+			baseUrl: process.env.NODE_ENV === "production" ? "/angular2-schema-form/" : "/" 
 		})
 	],
 	devServer: {
-		port: 3000,
+		port: 3003,
 		historyApiFallback: true
 	},
 	node: {
