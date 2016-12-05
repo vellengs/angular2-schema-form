@@ -25,9 +25,14 @@ module.exports = function(env) {
         {
           test: /\.ts$/,
           loaders: [
-            'awesome-typescript-loader'
+            'awesome-typescript-loader',
+            'angular2-template-loader',
           ],
           exclude: [/\.(spec|e2e|d)\.ts$/]
+        },
+        {
+          test: /\.json$/,
+          loader: "json-loader"
         },
         {
           test: /\.css/,
@@ -44,6 +49,10 @@ module.exports = function(env) {
               fallbackLoader: 'style-loader',
               loader: 'css-loader?sourceMap!postcss-loader?sourceMap!sass-loader?sourceMap'
             })
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw-loader'
         }
       ]
     },
@@ -59,7 +68,7 @@ module.exports = function(env) {
       new HtmlWebpackPlugin({
         template: 'demo/index.html',
         chunksSortMode: 'dependency',
-        title: 'angular2-data-table'
+        title: 'angular2-schema-form'
       }),
       new CleanWebpackPlugin(['dist'], {
         root: dir(),

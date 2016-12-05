@@ -9,7 +9,7 @@ const { ENV, dir, APP_VERSION } = require('./helpers');
 
 const banner =
 `/**
- * angular2-data-table v${APP_VERSION} (https://github.com/swimlane/angular2-data-table)
+ * angular2-schema-form v${APP_VERSION} (https://github.com/makinacorpus/angular2-schema-form)
  * Copyright 2016
  * Licensed under MIT
  */`;
@@ -23,9 +23,14 @@ module.exports = function(env) {
         {
           test: /\.ts$/,
           loaders: [
+            'angular2-template-loader',
             'awesome-typescript-loader'
           ],
           exclude: [/\.(spec|e2e|d)\.ts$/]
+        },
+        {
+          test: /\.json$/,
+          loader: "json-loader"
         },
         {
           test: /\.css/,
@@ -42,6 +47,10 @@ module.exports = function(env) {
               fallbackLoader: 'style-loader',
               loader: 'css-loader?sourceMap!postcss-loader?sourceMap!sass-loader?sourceMap'
             })
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw-loader'
         }
       ]
     },
@@ -51,7 +60,7 @@ module.exports = function(env) {
     output: {
       path: dir('release'),
       libraryTarget: 'umd',
-      library: 'angular2-data-table',
+      library: 'angular2-schema-form',
       umdNamedDefine: true
     },
     externals: {

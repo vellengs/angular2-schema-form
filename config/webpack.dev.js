@@ -44,8 +44,13 @@ module.exports = function(options) {
           exclude: /(node_modules|release|dist)/
         },
         {
+          test: /\.json$/,
+          loader: "json-loader"
+        },
+        {
           test: /\.ts$/,
           loaders: [
+            'angular2-template-loader',
             'awesome-typescript-loader',
             '@angularclass/hmr-loader'
           ],
@@ -58,6 +63,10 @@ module.exports = function(options) {
         {
           test: /\.scss$/,
           loader: 'style-loader!css-loader!postcss-loader?sourceMap!sass-loader?sourceMap'
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw-loader'
         }
       ]
     },
@@ -70,13 +79,13 @@ module.exports = function(options) {
       new HtmlWebpackPlugin({
         template: 'demo/index.html',
         chunksSortMode: 'dependency',
-        title: 'angular2-data-table'
+        title: 'schema-form'
       }),
       new WebpackNotifierPlugin({
         excludeWarnings: true
       }),
       new ProgressBarPlugin({
-        format: chalk.yellow.bold('Webpack Building...') + 
+        format: chalk.yellow.bold('Webpack Building...') +
           ' [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)'
       }),
       new webpack.HotModuleReplacementPlugin()

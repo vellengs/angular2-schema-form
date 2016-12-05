@@ -18,6 +18,11 @@ module.exports = function(env) {
         },
         {
           test: /\.ts$/,
+          loader: 'angular2-template-loader',
+          exclude: [/\.e2e\.ts$/, /(node_modules)/]
+        },
+        {
+          test: /\.ts$/,
           loader: 'awesome-typescript-loader',
           query: {
             sourceMap: false,
@@ -39,12 +44,20 @@ module.exports = function(env) {
           ]
         },
         {
+          test: /\.json$/,
+          loader: "json-loader"
+        },
+        {
           test: /\.css/,
           loader: 'style-loader!css-loader?sourceMap'
         },
         {
           test: /\.scss$/,
           loader: 'style-loader!css-loader!postcss-loader?sourceMap!sass-loader?sourceMap'
+        },
+        {
+          test: /\.html$/,
+          loader: 'raw-loader'
         }
       ]
     },
