@@ -8,7 +8,6 @@ import {
 import { FormElementComponent } from './schema-form/formelement.component';
 import { FormComponent } from './schema-form/form.component';
 import { WidgetChooserComponent } from './schema-form/widgetchooser.component';
-import { WidgetRegistry } from './schema-form/widgetregistry';
 import {
   ArrayWidget,
   ObjectWidget,

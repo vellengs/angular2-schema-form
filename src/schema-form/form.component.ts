@@ -5,7 +5,7 @@ import {
   EventEmitter,
   Input,
   Output
-} from "@angular/core";
+} from '@angular/core';
 
 import {
   Action,
@@ -15,15 +15,15 @@ import {
   SchemaPreprocessor,
   ValidatorRegistry,
   Validator
-} from "./model";
+} from './model';
 
-import { SchemaValidatorFactory, ZSchemaValidatorFactory } from "./schemavalidatorfactory";
-import { WidgetFactory } from "./widgetfactory";
+import { SchemaValidatorFactory, ZSchemaValidatorFactory } from './schemavalidatorfactory';
+import { WidgetFactory } from './widgetfactory';
 
 
 @Component({
-  selector: "schema-form",
-  templateUrl: "./form.component.html",
+  selector: 'sf-form',
+  templateUrl: './form.component.html',
   providers: [
     ActionRegistry,
     ValidatorRegistry,
@@ -93,7 +93,9 @@ export class FormComponent implements OnChanges {
     this.validatorRegistry.clear();
     if (this.validators) {
       for (let validatorId in this.validators) {
-        this.validatorRegistry.register(validatorId, this.validators[validatorId]);
+        if (this.validators.hasOwnProperty(validatorId)) {
+          this.validatorRegistry.register(validatorId, this.validators[validatorId]);
+        }
       }
     }
   }
@@ -102,7 +104,9 @@ export class FormComponent implements OnChanges {
     this.actionRegistry.clear();
     if (this.actions) {
       for (let actionId in this.actions) {
-        this.actionRegistry.register(actionId, this.actions[actionId]);
+        if (this.actions.hasOwnProperty(actionId)) {
+          this.actionRegistry.register(actionId, this.actions[actionId]);
+        }
       }
     }
   }

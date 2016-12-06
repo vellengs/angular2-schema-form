@@ -1,11 +1,9 @@
-import {
-  Component,
-} from "@angular/core";
+import { Component } from '@angular/core';
 
-import { ObjectLayoutWidget } from "../../widget";
+import { ObjectLayoutWidget } from '../../widget';
 
 @Component({
-  selector: "form-object",
-  templateUrl: "./object.widget.html"
+  selector: 'sf-form-object',
+  templateUrl: './object.widget.html'
 })
 export class ObjectWidget extends ObjectLayoutWidget { }

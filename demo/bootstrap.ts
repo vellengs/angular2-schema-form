@@ -9,5 +9,6 @@ export function main(): Promise<any> {
     .catch(err => console.error(err));
 }
 
-if(HMR) bootloader(main);
-if(!HMR) main();
+if (HMR) { bootloader(main); }
+if (!HMR) { main(); }
+

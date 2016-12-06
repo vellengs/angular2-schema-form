@@ -10,13 +10,13 @@ import {
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 @Component({
-  selector: 'schema-form-demo-app',
+  selector: 'sf-demo-app',
   template: `
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <schema-form [schema]="schema" [model]="model" [validators]="fieldValidators" [actions]="actions">
-          </schema-form>
+          <sf-form [schema]="schema" [model]="model" [validators]="fieldValidators" [actions]="actions">
+          </sf-form>
         </div>
         <div class="col-md-6">
           <pre>{{schema | json}}</pre>
@@ -39,14 +39,12 @@ export class AppComponent {
 
   version: string = APP_VERSION;
 
-  private schema: any;
-  private model: any;
-  private fieldValidators: {[fieldId: string]: Validator } = {};
-  private actions = {};
+  schema: any;
+  model: any;
+  fieldValidators: {[fieldId: string]: Validator } = {};
+  actions = {};
 
   constructor(registry: WidgetRegistry) {
-
-    // this.state = 'chkbox-selection';
 
     this.schema = require('./sampleschema.json');
     this.model = require('./samplemodel.json');
@@ -91,7 +89,7 @@ export class AppComponent {
           let validYear = new Date().getFullYear() - 17;
 
           try {
-            let actualYear = parseInt(date[0]);
+            let actualYear = parseInt(date[0], 10);
 
             if (actualYear < validYear) {
               return null;

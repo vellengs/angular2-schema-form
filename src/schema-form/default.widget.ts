@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "default-field",
+  selector: 'sf-default-field',
   template: `<p>Cannot find valid type for {{name}}`
 })
 export class DefaultWidget {}

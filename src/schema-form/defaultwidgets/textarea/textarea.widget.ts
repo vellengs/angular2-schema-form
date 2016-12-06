@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import { ControlWidget } from "../../widget";
+import { ControlWidget } from '../../widget';
 
 @Component({
-  selector: "textarea-widget",
-  templateUrl: "./textarea.widget.html"
+  selector: 'sf-textarea-widget',
+  templateUrl: './textarea.widget.html'
 })
 export class TextAreaWidget extends ControlWidget {}
