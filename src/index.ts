@@ -5,4 +5,4 @@ export { DefaultWidgetRegistry } from './schema-form/defaultwidgets/defaultwidge
 
 
 export * from './schema-form/widget';
-export * from './schema-form.module';
+export * from './schema-form/schema-form.module';

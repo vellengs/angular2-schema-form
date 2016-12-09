@@ -5,9 +5,9 @@ import {
   ReactiveFormsModule
 } from '@angular/forms';
 
-import { FormElementComponent } from './schema-form/formelement.component';
-import { FormComponent } from './schema-form/form.component';
-import { WidgetChooserComponent } from './schema-form/widgetchooser.component';
+import { FormElementComponent } from './formelement.component';
+import { FormComponent } from './form.component';
+import { WidgetChooserComponent } from './widgetchooser.component';
 import {
   ArrayWidget,
   ObjectWidget,
@@ -19,7 +19,7 @@ import {
   RangeWidget,
   SelectWidget,
   StringWidget
-} from './schema-form/defaultwidgets';
+} from './defaultwidgets';
 
 @NgModule({
   imports : [CommonModule, FormsModule, ReactiveFormsModule],
