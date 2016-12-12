@@ -4,7 +4,7 @@ import { ControlWidget } from '../../widget';
 
 @Component({
   selector: 'sf-string-widget',
-  templateUrl: './string.widget.html'
+  template: require('./string.widget.html')
 })
 export class StringWidget extends ControlWidget {
 

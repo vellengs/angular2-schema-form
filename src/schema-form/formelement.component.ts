@@ -17,7 +17,7 @@ import {
 
 @Component({
   selector: 'sf-form-element',
-  templateUrl: './formelement.component.html'
+  template: require('./formelement.component.html')
 })
 export class FormElementComponent implements OnInit {
 

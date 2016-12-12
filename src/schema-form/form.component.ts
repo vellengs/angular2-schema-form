@@ -23,7 +23,7 @@ import { WidgetFactory } from './widgetfactory';
 
 @Component({
   selector: 'sf-form',
-  templateUrl: './form.component.html',
+  template: require('./form.component.html'),
   providers: [
     ActionRegistry,
     ValidatorRegistry,

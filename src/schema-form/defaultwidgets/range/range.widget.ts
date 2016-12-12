@@ -4,6 +4,6 @@ import { ControlWidget } from '../../widget';
 
 @Component({
   selector: 'sf-range-widget',
-  templateUrl: './range.widget.html'
+  template: require('./range.widget.html')
 })
 export class RangeWidget extends ControlWidget {}

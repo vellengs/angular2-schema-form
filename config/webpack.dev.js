@@ -50,7 +50,6 @@ module.exports = function(options) {
         {
           test: /\.ts$/,
           loaders: [
-            'angular2-template-loader',
             'awesome-typescript-loader',
             '@angularclass/hmr-loader'
           ],

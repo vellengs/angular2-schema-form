@@ -4,6 +4,6 @@ import { ControlWidget } from '../../widget';
 
 @Component({
   selector: 'sf-checkbox-widget',
-  templateUrl: './checkbox.widget.html'
+  template: require('./checkbox.widget.html')
 })
 export class CheckboxWidget extends ControlWidget {}

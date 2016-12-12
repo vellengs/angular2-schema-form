@@ -18,11 +18,6 @@ module.exports = function(env) {
         },
         {
           test: /\.ts$/,
-          loader: 'angular2-template-loader',
-          exclude: [/\.e2e\.ts$/, /(node_modules)/]
-        },
-        {
-          test: /\.ts$/,
           loader: 'awesome-typescript-loader',
           query: {
             sourceMap: false,

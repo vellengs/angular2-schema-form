@@ -4,7 +4,7 @@ import { ControlWidget } from '../../widget';
 
 @Component({
   selector: 'sf-file-widget',
-  templateUrl: './file.widget.html'
+  template: require('./file.widget.html')
 })
 export class FileWidget extends ControlWidget {
 
