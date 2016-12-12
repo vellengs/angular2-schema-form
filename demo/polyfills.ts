@@ -11,6 +11,9 @@ import '@angular/common';
 // RxJS
 import 'rxjs/Rx';
 
+declare const IS_PRODUCTION: boolean;
+declare const IS_DEV: boolean;
+
 // optimization for production
 // https://github.com/AngularClass/angular2-webpack-starter/blob/master/src/platform/environment.ts#L17
 if (IS_PRODUCTION) {

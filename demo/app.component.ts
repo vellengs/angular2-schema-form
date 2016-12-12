@@ -7,7 +7,8 @@ import {
     Validator,
     DefaultWidgetRegistry
 } from '../src';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
+declare const APP_VERSION: string;
 
 @Component({
   selector: 'sf-demo-app',
@@ -19,6 +20,7 @@ import {
           </sf-form>
         </div>
         <div class="col-md-6">
+          <button>Change Schema</button>
           <pre>{{schema | json}}</pre>
         </div>
       </div>
@@ -28,14 +30,6 @@ import {
   providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}]
 })
 export class AppComponent {
-
-  get state() {
-    return window.state;
-  }
-
-  set state(state) {
-    window.state = state;
-  }
 
   version: string = APP_VERSION;
 

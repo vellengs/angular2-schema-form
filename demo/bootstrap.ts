@@ -3,6 +3,8 @@ import { bootloader } from '@angularclass/hmr';
 
 import { AppModule } from './module';
 
+declare const HMR: string;
+
 export function main(): Promise<any> {
   return platformBrowserDynamic()
     .bootstrapModule(AppModule)
