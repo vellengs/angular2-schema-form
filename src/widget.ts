@@ -10,6 +10,7 @@ export abstract class Widget<T extends FormProperty> {
   id: string = '';
   name: string = '';
   schema: any = {};
+  required = false;
 }
 
 export class ControlWidget extends Widget<FormProperty> implements AfterViewInit {
